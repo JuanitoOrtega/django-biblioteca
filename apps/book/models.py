@@ -1,5 +1,6 @@
 from django.db import models
 from apps.author.models import Author
+from .managers import BookManager
 
 
 class Category(models.Model):
@@ -24,6 +25,8 @@ class Book(models.Model):
     class Meta:
         verbose_name = 'Libro'
         verbose_name_plural = 'Libros'
+
+    objects = BookManager()
 
     def __str__(self):
         return self.title

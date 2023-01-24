@@ -10,6 +10,7 @@ class Author(models.Model):
     last_name = models.CharField(max_length=100, verbose_name='Apellidos')
     nationality = CountryField(blank_label='Seleccionar país', verbose_name='Nacionalidad')
     birth_date = models.DateField(blank=True, null=True, verbose_name='Fecha de nacimiento')
+    age = models.IntegerField(blank=True, null=True, verbose_name='Edad')
 
     class Meta:
         verbose_name = 'Autor'
@@ -25,6 +26,12 @@ class Author(models.Model):
 
     def full_name(self):
         return f'{self.first_name} {self.last_name}'
+
+    def save(self, *args, **kwargs):
+        if self.birth_date:
+            today = timezone.now().date()
+            self.age = today.year - self.birth_date.year - ((today.month, today.day) < (self.birth_date.month, self.birth_date.day))
+        super().save(*args, **kwargs)
 
     objects = AuthorManager()
 
