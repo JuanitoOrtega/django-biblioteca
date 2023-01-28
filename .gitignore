@@ -345,3 +345,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/python,venv,django,linux,macos,windows
+
+# Deploy files
+wsgi.py
+prod.py

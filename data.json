@@ -1,0 +1,533 @@
+[
+{
+  "model": "author.author",
+  "pk": 1,
+  "fields": {
+    "first_name": "Gabriel",
+    "last_name": "García Márquez",
+    "nationality": "CO",
+    "birth_date": "1927-03-06",
+    "age": 95
+  }
+},
+{
+  "model": "author.author",
+  "pk": 2,
+  "fields": {
+    "first_name": "Andrés",
+    "last_name": "Oppenheimer",
+    "nationality": "AR",
+    "birth_date": "1951-11-24",
+    "age": 71
+  }
+},
+{
+  "model": "author.author",
+  "pk": 3,
+  "fields": {
+    "first_name": "Walter",
+    "last_name": "Isaacson",
+    "nationality": "US",
+    "birth_date": "1952-05-20",
+    "age": 70
+  }
+},
+{
+  "model": "author.author",
+  "pk": 4,
+  "fields": {
+    "first_name": "Mario",
+    "last_name": "Vargas Llosa",
+    "nationality": "PE",
+    "birth_date": "1936-03-28",
+    "age": 86
+  }
+},
+{
+  "model": "author.author",
+  "pk": 5,
+  "fields": {
+    "first_name": "Kim",
+    "last_name": "Woo-Choong",
+    "nationality": "KR",
+    "birth_date": "1936-12-19",
+    "age": 86
+  }
+},
+{
+  "model": "author.author",
+  "pk": 6,
+  "fields": {
+    "first_name": "Edmundo",
+    "last_name": "Paz Soldán",
+    "nationality": "BO",
+    "birth_date": "1967-03-29",
+    "age": 55
+  }
+},
+{
+  "model": "author.author",
+  "pk": 7,
+  "fields": {
+    "first_name": "Rodman",
+    "last_name": "Philbrick",
+    "nationality": "US",
+    "birth_date": "1951-01-22",
+    "age": 72
+  }
+},
+{
+  "model": "author.author",
+  "pk": 8,
+  "fields": {
+    "first_name": "Lynn",
+    "last_name": "Harnett",
+    "nationality": "US",
+    "birth_date": "1950-09-27",
+    "age": 72
+  }
+},
+{
+  "model": "author.author",
+  "pk": 9,
+  "fields": {
+    "first_name": "Robert",
+    "last_name": "Cecil Martin",
+    "nationality": "US",
+    "birth_date": "1952-03-29",
+    "age": 70
+  }
+},
+{
+  "model": "author.author",
+  "pk": 10,
+  "fields": {
+    "first_name": "Rafael",
+    "last_name": "Caballero",
+    "nationality": "US",
+    "birth_date": "1951-01-22",
+    "age": 72
+  }
+},
+{
+  "model": "author.author",
+  "pk": 11,
+  "fields": {
+    "first_name": "Enrique",
+    "last_name": "Martín Martín",
+    "nationality": "BR",
+    "birth_date": "1950-09-27",
+    "age": 72
+  }
+},
+{
+  "model": "author.author",
+  "pk": 12,
+  "fields": {
+    "first_name": "Adrián",
+    "last_name": "Riesco",
+    "nationality": "CO",
+    "birth_date": "1952-03-29",
+    "age": 70
+  }
+},
+{
+  "model": "author.author",
+  "pk": 13,
+  "fields": {
+    "first_name": "Julio",
+    "last_name": "Verne",
+    "nationality": "FR",
+    "birth_date": "1828-02-08",
+    "age": 194
+  }
+},
+{
+  "model": "author.author",
+  "pk": 14,
+  "fields": {
+    "first_name": "Ernesto",
+    "last_name": "Sábato",
+    "nationality": "AR",
+    "birth_date": "1911-06-24",
+    "age": 111
+  }
+},
+{
+  "model": "author.author",
+  "pk": 15,
+  "fields": {
+    "first_name": "Robert",
+    "last_name": "Kiyosaki",
+    "nationality": "US",
+    "birth_date": "1947-04-08",
+    "age": 75
+  }
+},
+{
+  "model": "author.author",
+  "pk": 16,
+  "fields": {
+    "first_name": "Sharon",
+    "last_name": "Lechter",
+    "nationality": "US",
+    "birth_date": "1954-01-12",
+    "age": 69
+  }
+},
+{
+  "model": "book.category",
+  "pk": 1,
+  "fields": {
+    "name": "Novelas"
+  }
+},
+{
+  "model": "book.category",
+  "pk": 2,
+  "fields": {
+    "name": "Informática"
+  }
+},
+{
+  "model": "book.category",
+  "pk": 3,
+  "fields": {
+    "name": "Biografías"
+  }
+},
+{
+  "model": "book.category",
+  "pk": 4,
+  "fields": {
+    "name": "Ficción"
+  }
+},
+{
+  "model": "book.category",
+  "pk": 5,
+  "fields": {
+    "name": "Autorealización"
+  }
+},
+{
+  "model": "book.book",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "title": "Cien años de soledad",
+    "published": "1967-03-05",
+    "image": "books/cien-anios-de-soledad.jpg",
+    "views": 0,
+    "authors": [
+      1
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 2,
+  "fields": {
+    "category": 2,
+    "title": "Crear o morir",
+    "published": "2020-01-01",
+    "image": "books/crear-o-morir-de-andrs-oppenheimer-primer-captulo-1-638.jpg",
+    "views": 0,
+    "authors": [
+      2
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 3,
+  "fields": {
+    "category": 2,
+    "title": "Cuentos Chinos",
+    "published": "2005-11-29",
+    "image": "books/cuentos-chinos.jpeg",
+    "views": 0,
+    "authors": [
+      2
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 4,
+  "fields": {
+    "category": 3,
+    "title": "Steve Jobs",
+    "published": "2011-10-24",
+    "image": "books/steve-jobs.jpg",
+    "views": 0,
+    "authors": [
+      3
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "title": "El coronel no tiene quien le escriba",
+    "published": "1961-11-09",
+    "image": "books/el-coronel.jpg",
+    "views": 0,
+    "authors": [
+      1
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 6,
+  "fields": {
+    "category": 1,
+    "title": "Crónica de una muerte anunciada",
+    "published": "1981-09-07",
+    "image": "books/Cronicadeunamuerteanunciada.jpg",
+    "views": 0,
+    "authors": [
+      1
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 7,
+  "fields": {
+    "category": 1,
+    "title": "El amor en los tiempos del cólera",
+    "published": "1985-10-11",
+    "image": "books/amor-tiempos.jpg",
+    "views": 0,
+    "authors": [
+      1
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 8,
+  "fields": {
+    "category": 1,
+    "title": "La ciudad y los perros",
+    "published": "1963-05-11",
+    "image": "books/laciudadylosperros.jpg",
+    "views": 0,
+    "authors": [
+      4
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 9,
+  "fields": {
+    "category": 4,
+    "title": "El mundo es tuyo pero tienes que ganartelo",
+    "published": "1989-09-06",
+    "image": "books/el-mundo-es-tuyo.jpg",
+    "views": 0,
+    "authors": [
+      5
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 10,
+  "fields": {
+    "category": 1,
+    "title": "Amores imperfectos",
+    "published": "1998-05-15",
+    "image": "books/amores-imperfectos.jpg",
+    "views": 0,
+    "authors": [
+      6,
+      5
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 11,
+  "fields": {
+    "category": 1,
+    "title": "El último libro del universo",
+    "published": "2000-05-15",
+    "image": "books/el-ultimo-libro-del-universo.jpg",
+    "views": 0,
+    "authors": [
+      8,
+      7
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 12,
+  "fields": {
+    "category": 2,
+    "title": "Clean Code",
+    "published": "2008-08-01",
+    "image": "books/clean_code.jpg",
+    "views": 0,
+    "authors": [
+      9
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 13,
+  "fields": {
+    "category": 2,
+    "title": "Big Data con Python",
+    "published": "2019-05-15",
+    "image": "books/big_data.jpg",
+    "views": 0,
+    "authors": [
+      10,
+      11,
+      12
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 14,
+  "fields": {
+    "category": 4,
+    "title": "Viaje al centro de la Tierra",
+    "published": "1864-11-25",
+    "image": "books/jl_viaje_centro_tierra.jpg",
+    "views": 0,
+    "authors": [
+      13
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 15,
+  "fields": {
+    "category": 4,
+    "title": "Memoria de mis putas tristes",
+    "published": "2004-02-02",
+    "image": "books/memorias_de_mis_putas_tristes.jpg",
+    "views": 0,
+    "authors": [
+      1
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 16,
+  "fields": {
+    "category": 1,
+    "title": "El túnel",
+    "published": "1948-05-10",
+    "image": "books/el_tunel.jpg",
+    "views": 0,
+    "authors": [
+      14
+    ]
+  }
+},
+{
+  "model": "book.book",
+  "pk": 17,
+  "fields": {
+    "category": 5,
+    "title": "Padre Rico, Padre Pobre",
+    "published": "1997-05-15",
+    "image": "books/padre_rico_padre_pobre.jpg",
+    "views": 0,
+    "authors": [
+      16,
+      15
+    ]
+  }
+},
+{
+  "model": "reader.reader",
+  "pk": 1,
+  "fields": {
+    "first_name": "Juanito",
+    "last_name": "Ortega",
+    "nationality": "BO",
+    "birth_date": "1983-08-29",
+    "age": 39
+  }
+},
+{
+  "model": "reader.reader",
+  "pk": 2,
+  "fields": {
+    "first_name": "Felipe",
+    "last_name": "Pelaes",
+    "nationality": "BO",
+    "birth_date": "2005-01-26",
+    "age": 18
+  }
+},
+{
+  "model": "reader.lend",
+  "pk": 1,
+  "fields": {
+    "reader": 1,
+    "book": 1,
+    "lend_date": "2023-01-06T19:43:52Z",
+    "return_date": "2023-01-27T03:10:23Z",
+    "returned": true
+  }
+},
+{
+  "model": "reader.lend",
+  "pk": 2,
+  "fields": {
+    "reader": 2,
+    "book": 13,
+    "lend_date": "2023-01-25T03:11:14Z",
+    "return_date": "2023-01-27T03:11:20Z",
+    "returned": true
+  }
+},
+{
+  "model": "reader.lend",
+  "pk": 3,
+  "fields": {
+    "reader": 1,
+    "book": 1,
+    "lend_date": "2023-01-25T13:52:35Z",
+    "return_date": "2023-01-27T13:52:39Z",
+    "returned": true
+  }
+},
+{
+  "model": "reader.lend",
+  "pk": 4,
+  "fields": {
+    "reader": 2,
+    "book": 1,
+    "lend_date": "2023-01-20T13:53:00Z",
+    "return_date": "2023-01-27T13:53:02Z",
+    "returned": true
+  }
+},
+{
+  "model": "reader.lend",
+  "pk": 5,
+  "fields": {
+    "reader": 1,
+    "book": 13,
+    "lend_date": "2023-01-27T13:54:17Z",
+    "return_date": "2023-01-27T13:54:19Z",
+    "returned": true
+  }
+}
+]

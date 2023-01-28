@@ -1,15 +1,38 @@
-<h1>Lista de autores</h1>
+{% extends 'base.html' %}
 
-<p>
-    <form method="get">
-        {% csrf_token %}
-        <input type="text" name="kword" id="kword" placeholder="Ingrese nombre">
-        <button type="submit">Consultar</button>
-    </form>
-</p>
+{% block content %}
+        <div class="row">
+            <div class="col-12 mt-3">
+                <h1>Lista de autores</h1>
 
-<ul>
-    {% for a in authors %}
-    <li>{{ a.full_name }} | {{ a.nationality.name }}</li>
-    {% endfor %}
-</ul>
+                <form method="get" class="row g-2">
+                    {% csrf_token %}
+                    <div class="col-auto">
+                        <input type="text" class="form-control" name="kword" id="kword" placeholder="Ingrese nombre del autor">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3">Buscar</button>
+                    </div>
+                </form>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre completo</th>
+                            <th>Nacionalidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for a in authors %}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ a.full_name }}</td>
+                            <td>{{ a.nationality.name }} <img src="{{ a.nationality.flag }}" alt="{{ a.nationality.name }}"></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+{% endblock  %}

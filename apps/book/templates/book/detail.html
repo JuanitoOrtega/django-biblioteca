@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <h1>Detalles del libro</h1>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6 text-center">
+                <img src="{{ book.image.url }}" alt="Tapa de {{ book.title }}" style="width: 400px;">
+            </div>
+
+            <div class="col-md-6">
+                <p><strong>Título de la obra:</strong> {{ book.title }}</p>
+                <p><strong>Género literario:</strong> {{ book.category.name }}</p>
+                <p><strong>Autor o autores:</strong>
+                    {% for a in book.authors.all %}
+                    <p>{{ a.full_name }}</p>
+                    {% endfor %}
+                </p>
+                <p><strong>Fecha de lanzamiento:</strong> {{ book.published }}</p>
+            </div>
+        </div>
+{% endblock  %}

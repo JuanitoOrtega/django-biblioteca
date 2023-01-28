@@ -13,20 +13,29 @@ SECRET_KEY = config('SECRET_KEY')
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+
+THIRD_PARTY_APPS = [
     # Package
     'django_countries',
+]
+
+LOCAL_APPS = [
     # Apps
     'apps.book',
     'apps.author',
     'apps.reader',
+    'apps.users',
 ]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,6 +86,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Custom user manager
+AUTH_USER_MODEL = 'users.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
@@ -96,4 +107,4 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Countries
-COUNTRIES_ONLY = ['AR', 'BO', 'BR', 'CL', 'CO', 'EC', 'PE', 'PY', 'UY', 'VE', 'US', 'KR']
+COUNTRIES_ONLY = ['AR', 'BO', 'BR', 'CL', 'CO', 'EC', 'PE', 'PY', 'UY', 'VE', 'US', 'KR', 'FR']

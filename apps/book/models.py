@@ -1,6 +1,6 @@
 from django.db import models
 from apps.author.models import Author
-from .managers import BookManager
+from .managers import BookManager, CategoryManager
 
 
 class Category(models.Model):
@@ -10,12 +10,14 @@ class Category(models.Model):
         verbose_name = 'Categoría'
         verbose_name_plural = 'Categorías'
 
+    objects = CategoryManager()
+
     def __str__(self):
-        return self.name
+        return str(self.id) + ' - ' + self.name
 
 
 class Book(models.Model):
-    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Categoría')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='category_book', verbose_name='Categoría')
     authors = models.ManyToManyField(Author, verbose_name='Autores')
     title = models.CharField(max_length=100, unique=True, verbose_name='Título del libro')
     published = models.DateField(blank=True, null=True, verbose_name='Lanzamiento')
